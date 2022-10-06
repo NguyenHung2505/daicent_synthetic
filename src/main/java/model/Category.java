@@ -12,6 +12,11 @@ public class Category {
         this.nameCategory = nameCategory;
     }
 
+    public Category( String nameCategory) {
+        this.nameCategory = nameCategory;
+    }
+
+
     public int getIdCategory() {
         return idCategory;
     }
@@ -30,9 +35,6 @@ public class Category {
 
     @Override
     public String toString() {
-        return "Category{" +
-                "idCategory=" + idCategory +
-                ", nameCategory='" + nameCategory + '\'' +
-                '}';
+        return " nameCategory='" + nameCategory ;
     }
 }

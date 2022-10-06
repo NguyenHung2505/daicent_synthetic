@@ -109,19 +109,17 @@ public class CategoryDetailImpl implements CategoryDetailDAO {
         return rowDeleted;
     }
     @Override
-    public List<CategoryDetail> searchByNameCategoryDetail(String nameCategoryDetail) {
+    public List<CategoryDetail> searchByNameCategoryD(String nameCategoryDetail) {
         try (Connection connection = JDBCUtil.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "select * from categorydetail c join category c2 on c2.idCategory = c.idCategory where nameCategory = ? ;");) {
             preparedStatement.setString(1, nameCategoryDetail );
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                int idCategory = rs.getInt("idCategoryDetail");
                 String nameCategoryss = rs.getString("nameCategoryDetail");
                 int categoryId = rs.getInt("idCategory");
-
                 Category categoryid = categoryService.findById(categoryId);
-                categoryDetails.add(new CategoryDetail(idCategory ,nameCategoryss , categoryid ));
+                categoryDetails.add(new CategoryDetail( nameCategoryss , categoryid ));
             }
             JDBCUtil.closeConnection(connection);
         } catch (SQLException e) {

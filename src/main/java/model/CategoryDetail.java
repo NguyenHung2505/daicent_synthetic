@@ -14,6 +14,11 @@ public class CategoryDetail {
         this.categoryId = categoryId;
     }
 
+    public CategoryDetail( String nameCategorydetail , Category categoryId) {
+        this.nameCategorydetail = nameCategorydetail;
+        this.categoryId = categoryId;
+    }
+
     public int getIdCategoryDetail() {
         return idCategoryDetail;
     }
@@ -40,10 +45,6 @@ public class CategoryDetail {
 
     @Override
     public String toString() {
-        return "CategoryDetail{" +
-                "idCategoryDetail=" + idCategoryDetail +
-                ", nameCategorydetail='" + nameCategorydetail + '\'' +
-                ", categoryId=" + categoryId +
-                '}';
+        return " nameCategorydetail='" + nameCategorydetail +  "  |  " + categoryId ;
     }
 }

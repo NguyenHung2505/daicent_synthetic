@@ -110,13 +110,12 @@ public class CategoryImpl implements CategoryService{
     public List<Category> searchByNameCategory(String nameCategory) {
         try (Connection connection = JDBCUtil.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
-                     "select * from category where nameCategory = ?");) {
+                     "select nameCategory from category where nameCategory = ?");) {
             preparedStatement.setString(1, nameCategory );
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                int idCategory = rs.getInt("idCategory");
                 String s = rs.getString("nameCategory");
-                categoryList.add(new Category(idCategory,s));
+                categoryList.add(new Category(s));
             }
             JDBCUtil.closeConnection(connection);
         } catch (SQLException e) {

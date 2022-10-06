@@ -17,6 +17,8 @@ public class Product {
         this.idCategoryDetail = idCategoryDetail;
     }
 
+
+
     public int getIdProduct() {
         return idProduct;
     }
@@ -51,11 +53,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "idProduct=" + idProduct +
-                ", nameProduct='" + nameProduct + '\'' +
-                ", priceProduct=" + priceProduct +
-                ", idCategoryDetail=" + idCategoryDetail +
-                '}';
+        return "idProduct=" + idProduct + "   |   " + " nameProduct='" + nameProduct + "   |   " + " priceProduct=" + priceProduct + "   |   " +"" + idCategoryDetail ;
     }
 }

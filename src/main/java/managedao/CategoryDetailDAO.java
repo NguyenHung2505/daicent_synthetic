@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface CategoryDetailDAO extends GenneralDAO<CategoryDetail>{
 
-    List<CategoryDetail> searchByNameCategoryDetail (String valueName);
+    List<CategoryDetail> searchByNameCategoryD (String valueName);
 
     List<CategoryDetail> searchByApproximateNameDetail (String valueName);}

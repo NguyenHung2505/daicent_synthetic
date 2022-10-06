@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//      CategoryImpl category = new CategoryImpl();
+ //     CategoryImpl category = new CategoryImpl();
 //        List<Category> categoryList = category.searchByApproximateName("c");
 //        for (Category c: categoryList) {
 //            System.out.println(c);
@@ -29,15 +29,14 @@ public class Main {
 //        System.out.println(category.searchByNameCategory("chợ"));
 
 
-//      CategoryDetailImpl categoryDetail = new CategoryDetailImpl();
+  //   CategoryDetailImpl categoryDetail = new CategoryDetailImpl();
 //        List<CategoryDetail> categoryDetailList = categoryDetail.findAll();
 //        for (CategoryDetail c: categoryDetailList) {
 //            System.out.println(c.toString());
 //        }
 //       categoryDetail.insert(new CategoryDetail(5,"hung", new Category(1,"chợ")));
 //        System.out.println(categoryDetail.findById(2));
-//       List<CategoryDetail> categoryDetailList = categoryDetail.searchByNameCategoryDetail("chợ");
-//
+//       List<CategoryDetail> categoryDetailList = categoryDetail.searchByNameCategoryD("chợ");
 //        for (CategoryDetail c: categoryDetailList
 //             ) {
 //            System.out.println(c);
@@ -49,7 +48,7 @@ public class Main {
 //        }
 
 
-        ProductImpl productImpl = new ProductImpl();
+       ProductImpl productImpl = new ProductImpl();
 //       List<Product> productList = productImpl.findAll();
 //        for (Product p: productList) {
 //            System.out.println(p.toString());
@@ -61,6 +60,6 @@ public class Main {
         for (Product p: products) {
             System.out.println(p);
         }
-  //     System.out.println(productImpl.seachNameProduct("bút"));
+//      System.out.println(productImpl.seachNameProduct("bút"));
     }
 }
